@@ -1,0 +1,13 @@
+# 1. まず「CPU版の置き場所」を教える（これがないと重いGPU版になる）
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# 2. 必要なライブラリ名をリストアップする
+opencv-python-headless
+numpy
+matplotlib
+pandas
+scikit-learn
+
+# 3. ここで「torchを買う」と宣言（上のURLから探してくれる）
+torch
+torchvision
