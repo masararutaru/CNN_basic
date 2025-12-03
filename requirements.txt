@@ -2,12 +2,10 @@
 --extra-index-url https://download.pytorch.org/whl/cpu
 
 # 2. 必要なライブラリ名をリストアップする
-opencv-python-headless
-numpy
-matplotlib
-pandas
-scikit-learn
-
-# 3. ここで「torchを買う」と宣言（上のURLから探してくれる）
-torch
-torchvision
+opencv-python-headless==4.12.0.88
+numpy==2.2.6
+matplotlib==3.10.7
+pandas==2.3.3
+scikit-learn==1.7.2
+torch==2.9.1+cpu
+torchvision==0.24.1+cpu
