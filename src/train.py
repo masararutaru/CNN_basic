@@ -47,7 +47,6 @@ class CNN(nn.Module):
         x3 = self.classifier(x2)
         return x3
 
-torch_seed()
 
 net = CNN(n_output, n_hidden)
 
