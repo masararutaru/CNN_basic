@@ -2,8 +2,10 @@ print("importing libraries...")
 import torch
 import torch.nn as nn
 import torch.optim as optim
+import numpy as np
 
 from dataset import get_cifar10_loaders
+from fit import fit
 
 print("setting device...")
 device = torch.device("cuda" if torch.cuda.is_available() else 'cpu')
@@ -56,7 +58,9 @@ lr = 0.01
 
 optimizer = optim.SGD(net.parameters(), lr = lr)
 
-n_epochs = 10
+n_epochs = 5
 
-
+print("fitting...")
+history = np.zeros((0, 5))
+history = fit(net, optimizer, criterion, n_epochs, trainloader, testloader, history)
 
